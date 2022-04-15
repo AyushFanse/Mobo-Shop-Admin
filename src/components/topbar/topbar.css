@@ -1,0 +1,58 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(85, 80, 189);
+  cursor: pointer;
+}
+#menu-appbar{
+  text-align:center;
+  padding:15px;
+}
+#menuItemsOut{
+  display:flex;
+  justify-content:flex-start;
+}
+#menuItems{
+  font-size: 18px;
+  display:flex;
+  justify-content:space-around;
+  opacity:0.8;
+}
+#menuItemsOut:hover #menuItems{
+  opacity:1;
+  color:#1976d2;
+}
+#menuItemsUser{
+  font-size: 24px;
+  font-weight:600;
+  cursor: none;
+  margin:auto 10px;
+  display:flex;
+  justify-content:space-around;
+}
+#menuItemsIcon{
+  width: 20px;    
+  opacity:0.5;
+}
+#menuItemsOut:hover #menuItemsIcon{
+  opacity:1;
+  color:#1976d2;
+}

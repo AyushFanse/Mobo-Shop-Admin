@@ -1,0 +1,25 @@
+.loginLayout{
+    display:flex;
+    justify-content:center;
+    margin-top:125px;
+}
+.loginCardLayout{
+    box-shadow: 5px 5px 10px #1976d253;
+    padding:25px;
+    border-bottom:4px solid #1976d2;
+    border-radius:5px;
+}
+.loginHeading{
+    font-family:Montserrat;
+    text-align:center;
+    font-size:32px;
+}
+.createAccount{
+    font-family:Montserrat;
+    text-align:center;
+    font-size:16px;
+    font-weight:600;
+}
+.link{
+    color:#1976d2;
+}
