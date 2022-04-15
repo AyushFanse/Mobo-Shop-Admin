@@ -21,10 +21,6 @@ export default function Product() {
       currency: "INR",
       minimumFractionDigits: 0,
   });
-  // const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-  const DataBase = 'http://localhost:3001';
-
-
 
   useEffect(()=>{   
     Fatch();
