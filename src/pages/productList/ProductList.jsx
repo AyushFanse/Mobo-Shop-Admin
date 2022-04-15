@@ -4,6 +4,7 @@ import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
+import { DataBase } from "../../DataFiles";
 import { Alert, Stack } from '@mui/material';
 
 export default function ProductList() {
@@ -15,8 +16,6 @@ export default function ProductList() {
       currency: "INR",
       minimumFractionDigits: 0,
   });
-  const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-  // const DataBase = 'http://localhost:3001';
 
   useEffect( () =>{ Fatch() })
 

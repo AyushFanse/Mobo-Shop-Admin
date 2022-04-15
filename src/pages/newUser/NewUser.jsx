@@ -3,13 +3,12 @@ import React, {useState, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { Alert, Stack } from '@mui/material';
+import { DataBase } from "../../DataFiles";
 
 export default function NewUser(props) {
 
   const history = useHistory();
   const [Worning,setWorning] = useState('');
-  // const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-  const DataBase = 'http://localhost:3001';
   const contactForm = useRef();
 
   

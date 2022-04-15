@@ -8,6 +8,7 @@ import {
 } from "@material-ui/icons";
 import { FaceRounded, AdminPanelSettingsOutlined, EditTwoTone } from '@mui/icons-material';
 import { Link, useParams } from "react-router-dom";
+import { DataBase } from "../../DataFiles";
 import { Alert, Stack } from '@mui/material';
 import "./user.css";
 
@@ -17,8 +18,6 @@ export default function User(props) {
   const [Worning,setWorning] = useState('');
   const {userId} = useParams();
   const contactForm = useRef();
-  // const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-  const DataBase = 'http://localhost:3001';
 
 
     

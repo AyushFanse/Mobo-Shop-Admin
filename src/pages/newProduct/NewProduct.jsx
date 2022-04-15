@@ -4,6 +4,7 @@ import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import React, { useState, useRef } from "react";
 import { Alert, Stack } from '@mui/material';
+import { DataBase } from "../../DataFiles";
 
 export default function NewProduct() {
   
@@ -12,8 +13,6 @@ export default function NewProduct() {
     const [file, setFile] = useState('');
     const [baseImage, setBaseImage] = useState("");
     const contactForm = useRef();
-    // const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-    const DataBase = 'http://localhost:3001';
 
     
   const handleSubmit = async (e) => {

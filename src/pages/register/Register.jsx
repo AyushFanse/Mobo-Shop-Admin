@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import './register.css';
 import axios from 'axios';
 import { Alert, Stack } from '@mui/material';
+import { DataBase } from "../../DataFiles";
 import {Button,Grid,TextField,IconButton,FormControl,InputLabel,Input,InputAdornment,Box} from '@mui/material';
 import { Visibility, KeyboardBackspaceRounded, VisibilityOff } from '@mui/icons-material';
 
@@ -11,8 +12,6 @@ const LoginComponent = (props) => {
 const history = useHistory();
 const [showPassword,setShowPassword] = useState('');
 const [Worning,setWorning] = useState('');
-// const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-const DataBase = 'http://localhost:3001';
 const contactForm = useRef();
 
 //-------------------------------* PASSWORD VISIBILITY FUNCTIONS *-------------------------------//

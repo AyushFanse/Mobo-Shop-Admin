@@ -5,14 +5,13 @@ import axios from 'axios';
 import { Alert, Stack } from '@mui/material';
 import {IconButton,Button,Grid,TextField,FormControl,InputLabel, Input,InputAdornment,Box} from '@mui/material';
 import { Visibility, VisibilityOff, AccountCircle } from '@mui/icons-material';
+import { DataBase } from "../../DataFiles";
 
 const Login = (props) => {
 
 const history = useHistory();
 const [Worning,setWorning] = useState('');
 const [showPassword,setShowPassword] = useState('');
-// const DataBase = 'https://e-commerce-mobo-website.herokuapp.com';
-const DataBase = 'http://localhost:3001';
 const contactForm = useRef();
     
 const handleClickShowPassword = (e) => {

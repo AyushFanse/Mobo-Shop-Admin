@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import "./product.css";
 import Chart from "../../components/chart/Chart"
-import {productData} from "../../dummyData"
+import {productData, DataBase} from "../../DataFiles"
 import { Publish, HighlightOffTwoTone } from "@material-ui/icons";
 import axios from 'axios';
 import React,{ useState, useEffect, useRef } from "react";
