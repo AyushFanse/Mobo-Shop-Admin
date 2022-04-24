@@ -12,7 +12,7 @@ export default function Topbar() {
   const logout = ()=>{
     localStorage.removeItem('token');
     alert('You have been logged out');
-    history.replace('/');
+    history.push('/');
   }
 
   //-------------------------------* NAVIGATION MENU FUNCTIONS *-------------------------------//
