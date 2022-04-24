@@ -26,8 +26,6 @@ function Target(props) {
           if(decodedToken.user.post === "Admin"){
             if(decodedToken.exp*1000<=Date.now()){
                 history.replace('/');
-              }else{
-                console.log(decodedToken)
               }
           }else{
             alert('You do not have permission to access this page...!');

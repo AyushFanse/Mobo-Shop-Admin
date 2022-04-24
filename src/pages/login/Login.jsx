@@ -27,15 +27,13 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     const data = contactForm.current;
     try{
-        if( data.email.value && data.password.value ){   
-            console.log('pass'); 
+        if( data.email.value && data.password.value ){ 
                 let response = await axios.post(`${DataBase}/register/login`, {
                     email:data.email.value,
                     password:data.password.value
                 })         
                 
                 setWorning(response.data);
-                console.log(response.data);
 
                 if(response.data.status === 'success'){
                     localStorage.setItem( 'token', response.data.userToken );

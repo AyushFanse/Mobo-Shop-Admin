@@ -22,7 +22,6 @@ export default function ProductList() {
   const Fatch = (async()=>{
     var response = await axios.get(`${DataBase}/product/getproduct`)
     setData(response.data);
-    console.log(response.data);
   })
   
 

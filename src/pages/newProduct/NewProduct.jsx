@@ -18,12 +18,10 @@ export default function NewProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const updatedData = contactForm.current;
-    console.log(updatedData.available.value)
     try{   
         if(file==='' && updatedData.productName==='' && updatedData.brand==='' && updatedData.quanttity===''  && updatedData.price==='' && updatedData.rom==='' && updatedData.ram==='' && updatedData.processor==='' && updatedData.battery==='' && updatedData.available==='' ){   
             setWorning({status:'error', data:{msg:'Please fill all the details..!!!'}});
         }else{ 
-            console.log('form')
             const formData = new FormData();
                 formData.append('file', file);
                 formData.append('productName',updatedData.productName.value);
@@ -36,15 +34,11 @@ export default function NewProduct() {
                 formData.append('battery',updatedData.battery.value);
                 formData.append('available',updatedData.available.value);
             
-            console.log(formData);
           let response = await axios.post(`${DataBase}/product/saveproduct`, formData , {
             headers:{
                         'Content-Type': 'multipart/form-data'
                     }
             })
-            console.log(response);
-            console.log("done");
-            setWorning(response.data);
             setTimeout(()=>{setWorning('')},3000);
             if(response.data.status==='success'){
                 history.replace('/home/products');   
@@ -52,8 +46,6 @@ export default function NewProduct() {
     }} catch (err){
             setWorning({status:'error', msg:err.response.status + ' ' + err.response.statusText });
             setWorning({status:'error', msg:"fail" });
-            console.log(err.response)
-            console.log("fail");
             setTimeout(()=>{setWorning('')},3000);
     }
   }
