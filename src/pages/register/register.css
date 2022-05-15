@@ -1,31 +1,46 @@
-.backSpaceOut{
-    left:20px;
+.backSpaceOut {
+    left: 20px;
 }
-.backSpace{
-    color:#1976d2;
+
+.backSpace {
+    color: #1976d2;
 }
-.registerLayout{
-    display:flex;
-    justify-content:center;
-    margin-top:15px;
+
+.registerLayout {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
-.registerCardLayout{
+
+.registerCardLayout {
     box-shadow: 5px 5px 10px #1976d253;
-    padding:25px;
-    border-bottom:4px solid #1976d2;
-    border-radius:5px;
+    padding: 25px;
+    border-bottom: 4px solid #1976d2;
+    border-radius: 5px;
 }
-.registerHeading{
-    font-family:Montserrat;
-    text-align:center;
-    font-size:32px;
+
+.registerHeading {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 32px;
 }
-.loginAccount{
-    font-family:Montserrat;
-    text-align:center;
-    font-size:16px;
-    font-weight:600;
+
+.loginAccount {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
 }
-.link{
-    color:#1976d2;
+
+.link {
+    color: #1976d2;
+}
+
+#CircularProgress {
+    color: #1976d2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
 }
