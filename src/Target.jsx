@@ -20,17 +20,17 @@ function Target(props) {
 
     useEffect(()=>{
         if(decodedToken===null){
-            history.replace('/');            
+            history.push('/');            
             alert("Session Timeout Please Login Again...");
           }else{
           if(decodedToken.user.post === "Admin"){
             if(decodedToken.exp*1000<=Date.now()){
-                history.replace('/');
+                history.push('/');
               }
           }else{
             alert('You do not have permission to access this page...!');
             localStorage.removeItem('token');            
-            history.replace('/');
+            history.push('/');
         }
         }
     })

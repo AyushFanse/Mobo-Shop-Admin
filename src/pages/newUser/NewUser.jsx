@@ -34,7 +34,7 @@ let response = '';
           setTimeout(()=>{e.target.reset()},2000);
 
           if(response.data.status==='success'){
-              history.replace('/home/users');   
+              history.push('/home/users');   
           }
       }else{     
           setWorning({status:'error', msg:'Please fill all the details..!!!'})  

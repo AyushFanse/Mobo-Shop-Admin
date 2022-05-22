@@ -7,7 +7,7 @@ import { DataBase } from "../../DataFiles";
 import { Button, Grid, TextField, IconButton, FormControl, InputLabel, Input, CircularProgress, InputAdornment, Box } from '@mui/material';
 import { Visibility, KeyboardBackspaceRounded, VisibilityOff } from '@mui/icons-material';
 
-const LoginComponent = (props) => {
+const LoginComponent = () => {
 
     const [showPassword, setShowPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -76,7 +76,7 @@ const LoginComponent = (props) => {
     //-------------------------------* VALIDATION FUNCTIONS *-------------------------------//
     return (
         <>
-            <IconButton className='backSpaceOut' title="Back" onClick={() => { history.goBack() }} edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+            <IconButton className='backSpaceOut' title="Back" onClick={() => { history.push('/') }} edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                 <KeyboardBackspaceRounded className='backSpace' sx={{ fontSize: '2.5rem' }} title='Back' />
             </IconButton>
             <Box className='registerLayout'>
@@ -173,7 +173,7 @@ const LoginComponent = (props) => {
                             {loading && (<CircularProgress size={50} id='CircularProgress' />)}
                         </Grid>
                         <Grid sx={{ textAlign: 'center', cursor: 'pointer' }}>
-                            <p className="loginAccount">Already have account ? <span className='link' onClick={() => { history.replace('/') }} variant="body2">Log-In</span></p>
+                            <p className="loginAccount">Already have account ? <span className='link' onClick={() => { history.push('/') }} variant="body2">Log-In</span></p>
                         </Grid>
                     </form>
                 </Grid>

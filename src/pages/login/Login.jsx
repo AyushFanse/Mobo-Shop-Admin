@@ -24,7 +24,7 @@ import {
 } from "@mui/icons-material";
 import { DataBase } from "../../DataFiles";
 
-const Login = (props) => {
+const Login = () => {
   const history = useHistory();
   const [Worning, setWorning] = useState("");
   const [loading, setLoading] = useState(false);
@@ -53,10 +53,15 @@ const Login = (props) => {
 
         setWorning(response.data);
 
-        if (response.status === 201) {
-          localStorage.setItem("token", response.data.userToken);
-          props.history.push("/home");
+        if (response.status === 200) {
+          localStorage.setItem('token', response.data.userToken);
+          history.push('/home');
         }
+
+        if (response.status === 400) {
+          setWorning({ status: 'error', msg: response.data.msg })
+        }
+
       } else {
         setWorning({
           status: "error",
@@ -116,7 +121,6 @@ const Login = (props) => {
                 id='input-with-icon-textfield'
                 label='Email'
                 name='email'
-                value={props.email}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position='start'>
@@ -137,7 +141,6 @@ const Login = (props) => {
                   id='standard-adornment-password'
                   type={showPassword ? "text" : "password"}
                   name='password'
-                  value={props.password}
                   sx={{ width: 293 }}
                   endAdornment={
                     <InputAdornment position='end'>
@@ -170,7 +173,7 @@ const Login = (props) => {
                 <span
                   className='link'
                   onClick={() => {
-                    history.replace("/register");
+                    history.push("/register");
                   }}
                   variant='body2'
                 >

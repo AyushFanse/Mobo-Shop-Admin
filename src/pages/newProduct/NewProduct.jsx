@@ -39,7 +39,7 @@ export default function NewProduct() {
                 })
                 setTimeout(() => { setWorning('') }, 3000);
                 if (response.data.status === 'success') {
-                    history.replace('/home/products');
+                    history.push('/home/products');
                 }
             } else {
                 setWorning({ status: 'error', data: { msg: 'Please fill all the details..!!!' } });
