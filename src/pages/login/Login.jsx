@@ -53,7 +53,7 @@ const Login = (props) => {
 
         setWorning(response.data);
 
-        if (response.data.status === "success") {
+        if (response.status === 201) {
           localStorage.setItem("token", response.data.userToken);
           props.history.push("/home");
         }
